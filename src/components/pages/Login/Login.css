@@ -1,0 +1,176 @@
+
+     
+        
+          .login-wrapper {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+            position: relative;
+          }
+
+          .login-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+            padding: 2rem;
+            max-height: 90vh;
+           
+          }
+          
+          .tab-nav {
+            border-bottom: 2px solid #e9ecef;
+            margin-bottom: 2rem;
+          }
+          
+          .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            color: #6c757d;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+          }
+          
+          .tab-btn.active {
+            color: #28a745;
+          }
+          
+          .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #28a745;
+            border-radius: 2px;
+          }
+          
+          .form-control, .form-select {
+            border-radius: 15px;
+            padding: 0.9rem 1rem;
+            font-size: 1rem;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+          }
+          
+          .form-control:focus, .form-select:focus {
+            border-color: #28a745;
+            background: white;
+          }
+          
+          .password-field {
+            position: relative;
+          }
+          
+          .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6c757d;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+          }
+          
+          .password-toggle:hover {
+            color: #495057;
+          }
+          
+          .btn-primary {
+            background: #28a745;
+            border: none;
+            border-radius: 15px;
+            padding: 0.9rem;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+          }
+          
+          .btn-primary:hover:not(:disabled) {
+            background: #218838;
+            transform: translateY(-1px);
+          }
+          
+          .btn-primary:disabled {
+            background: #6c757d;
+            transform: none;
+            cursor: not-allowed;
+          }
+          
+          .btn-warning {
+            background: #ffc107;
+            border: none;
+            border-radius: 15px;
+            padding: 0.9rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #212529;
+            transition: all 0.3s ease;
+          }
+          
+          .btn-warning:hover:not(:disabled) {
+            background: #e0a800;
+            transform: translateY(-1px);
+          }
+          
+          .btn-warning:disabled {
+            background: #6c757d;
+            transform: none;
+            cursor: not-allowed;
+            color: white;
+          }
+          
+          .link-primary {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: 600;
+          }
+          
+          .link-primary:hover {
+            color: #218838;
+            text-decoration: underline;
+          }
+          
+          .error-text {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+          }
+          
+          .spinner-border-sm {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+          }
+
+          .form-row {
+            display: flex;
+            gap: 1rem;
+          }
+
+          .form-row .form-group {
+            flex: 1;
+          }
+
+          @media (max-width: 576px) {
+            .form-row {
+              flex-direction: column;
+              gap: 0;
+            }
+          }
+       
+     

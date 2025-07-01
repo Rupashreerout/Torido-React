@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 import { assets } from "../../assets/assets";
 const Navbar = () => {
   const [menu,setMenu]=useState("home");
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       <img src={assets.logo} alt="" className="logo" />
@@ -17,7 +19,7 @@ const Navbar = () => {
         <div className="navbar-search-icon">
           <img src={assets.basket_icon} alt="" />
         </div>
-        <button>sign in</button>
+          <button onClick={() => navigate('/login')}>sign in</button>
       </div>
     </div>
   );
