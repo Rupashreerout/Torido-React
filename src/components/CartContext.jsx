@@ -1,5 +1,6 @@
 // CartContext.js
 import React, { createContext, useContext, useState } from 'react';
+import { food_list } from '../assets/assets'; // Import food_list
 
 const CartContext = createContext();
 
@@ -41,12 +42,33 @@ export const CartProvider = ({ children }) => {
     return Object.values(cartItems).reduce((total, count) => total + count, 0);
   };
 
+  // Add getTotalCartAmount function
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = food_list.find((product) => product._id === item);
+        if (itemInfo) {
+          totalAmount += itemInfo.price * cartItems[item];
+        }
+      }
+    }
+    return totalAmount;
+  };
+
+  // Add clearCart function for payment completion
+  const clearCart = () => {
+    setCartItems({});
+  };
+
   const value = {
     cartItems,
     addToCart,
     removeFromCart,
     getItemCount,
-    getTotalCartItems
+    getTotalCartItems,
+    getTotalCartAmount,
+    clearCart
   };
 
   return (
