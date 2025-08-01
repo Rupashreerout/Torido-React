@@ -63,17 +63,13 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route
-            path='/Torido-React/home'
-            element={
+          <Route path='/Torido-React/home' element={
               <ProtectedRoute>
                 <Home />
               </ProtectedRoute>
             }
           />
-          <Route
-            path='/Torido-React/cart'
-            element={
+          <Route path='/Torido-React/cart'element={
               <ProtectedRoute>
                 <Cart />
               </ProtectedRoute>
